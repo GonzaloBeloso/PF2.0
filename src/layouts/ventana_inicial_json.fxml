@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="border_principal" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladoras.ControladoraInicial">
+    <top>
+        <MenuBar>
+           <menus>
+               <Menu text="Escena">
+                  <items>
+                      <MenuItem fx:id="menu_parte_dos" text="Login" />
+                      <MenuItem fx:id="menu_parte_uno" text="Peliculas" />
+                  </items>
+               </Menu>
+           </menus>
+        </MenuBar>
+    </top>
+
+
+</BorderPane>
