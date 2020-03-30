@@ -7,19 +7,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VentanaInicial extends Stage {
+public class VentanaRegistro extends Stage {
+    public VentanaRegistro() {
+        initGUI();
+    }
 
-    public VentanaInicial() {
-
+    private void initGUI() {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("layouts/ventana_parte_uno.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../layouts/layout_ventana_registro.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Scene scene = new Scene(root,600,400);
+        Scene scene = new Scene(root,700,500);
         this.setScene(scene);
         this.show();
     }
-
 }

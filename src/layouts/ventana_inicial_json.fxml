@@ -13,13 +13,29 @@
            <menus>
                <Menu text="Escena">
                   <items>
-                      <MenuItem fx:id="menu_parte_dos" text="Login" />
-                      <MenuItem fx:id="menu_parte_uno" text="Peliculas" />
+                      <MenuItem fx:id="menu_parte_uno" text="Login" />
+                      <MenuItem fx:id="menu_parte_dos" text="Registro" />
+                      <MenuItem fx:id="menu_parte_tres" text="Peliculas" />
                   </items>
                </Menu>
            </menus>
         </MenuBar>
     </top>
+    <center>
+        <GridPane>
+            <children>
+                <ListView fx:id="lista" />
+                <ImageView fx:id="imagen_ejemplo" GridPane.columnIndex="1" />
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </center>
 
 
 </BorderPane>

@@ -15,12 +15,12 @@ import java.util.ResourceBundle;
 
 public class ControladoraInicial implements Initializable {
     @FXML
-    MenuItem menu_parte_uno,menu_parte_dos;
+    MenuItem menu_parte_uno,menu_parte_dos,menu_parte_tres,menu_parte_cuatro;
     @FXML
     BorderPane border_principal;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../layouts/ventana_parte_uno.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/ventana_parte_uno.fxml"));
         try {
             Parent root = loader.load();
             border_principal.setCenter(root);
@@ -29,20 +29,38 @@ public class ControladoraInicial implements Initializable {
         }
         menu_parte_uno.setOnAction(new ManejadorPulsaciones());
         menu_parte_dos.setOnAction(new ManejadorPulsaciones());
+        menu_parte_tres.setOnAction(new ManejadorPulsaciones());
+        menu_parte_cuatro.setOnAction(new ManejadorPulsaciones());
     }
      private class ManejadorPulsaciones implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
-            if (event.getSource()==menu_parte_uno){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../layouts/ventana_parte_uno.fxml"));
+            if (event.getSource() == menu_parte_uno) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/layout_ventana_login.fxml"));
                 try {
                     Parent root = loader.load();
                     border_principal.setCenter(root);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }else if (event.getSource()==menu_parte_dos){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../layouts/ventana_inicial_propio.fxml"));
+            } else if (event.getSource() == menu_parte_dos) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/layout_ventana_registro.fxml"));
+                try {
+                    Parent root = loader.load();
+                    border_principal.setCenter(root);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (event.getSource() == menu_parte_tres) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/ventana_inicial_json.fxml"));
+                try {
+                    Parent root = loader.load();
+                    border_principal.setCenter(root);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (event.getSource() == menu_parte_cuatro) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/ventana_parte_uno.fxml"));
                 try {
                     Parent root = loader.load();
                     border_principal.setCenter(root);
